@@ -1,0 +1,57 @@
+{
+  "max_open_trades": 5,
+  "stake_currency": "USDT",
+  "dry_run": false,
+  "margin_mode": "cross",
+  "exchange": {
+    "name": "binance",
+    "key": "YOUR_BINANCE_API_KEY",
+    "secret": "YOUR_BINANCE_API_SECRET",
+    "pair_whitelist": [
+      "BTC/USDT",
+      "BTC/BUSD",
+      "BTC/USDC"
+    ],
+    "pair_blacklist": []
+  },
+  "stake_amount": 50,
+  "fiat_display_currency": "USD",
+  "telegram": {
+    "enabled": true,
+    "token": "YOUR_TELEGRAM_BOT_TOKEN",
+    "chat_id": "YOUR_TELEGRAM_CHAT_ID"
+  },
+  "db_url": "sqlite:///user_data/tradesv3.sqlite",
+  "initial_state": "running",
+  "forcebuy_enabled": false,
+  "ask_strategy": {
+    "price_side": "ask",
+    "use_order_book": false,
+    "order_book_top": 1,
+    "ask_last_balance": 0.0,
+    "ignore_roi_if_buy_signal": false
+  },
+  "bid_strategy": {
+    "price_side": "bid",
+    "use_order_book": false,
+    "order_book_top": 1,
+    "bid_last_balance": 0.0
+  },
+  "order_types": {
+    "entry": "limit",
+    "exit": "limit",
+    "emergency_exit": "market",
+    "force_exit": "market",
+    "stoploss": "market",
+    "stoploss_on_exchange": false,
+    "stoploss_on_exchange_interval": 60
+  },
+  "amount_reserve_percent": 0.05,
+  "user_data_format": "json",
+  "edge": {
+    "enabled": false
+  },
+  "dataformat_ohlcv": "json",
+  "dataformat_trades": "json",
+  "trading_mode": "spot"
+}
